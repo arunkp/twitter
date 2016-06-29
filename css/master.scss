@@ -1,3 +1,9 @@
+/* varibles */
+
+$dark-gray: #C6C1B0;
+$light-bg: #FDFAF4;
+$border: #E4E0D8;
+$yellowish-gray: #605E58;
 
 * {
 	box-sizing: border-box;
@@ -18,17 +24,17 @@ body {
 	font-weight: 600;
 }
 
-	.img-rounded {
-		display: block;
-		overflow: hidden;
-		border-radius: 50%;
-		img {
-			max-width: 100%;
-		}
+.img-rounded {
+	display: block;
+	overflow: hidden;
+	border-radius: 50%;
+	img {
+		max-width: 100%;
 	}
+}
 
 .navbar {
-	background-color: #FDFAF4;
+	background-color: $light-bg;
 	background-image: url(../imgs/twitter.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -52,10 +58,10 @@ body {
 		    padding: 13px;
 		    display: inline-block;
 		    vertical-align: top;
-		    border: 1px solid #E4E0D8;
+		    border: 1px solid $border;
 		    margin: 20px 10px;
 		    i {
-		    	color: #605E58;
+		    	color: $yellowish-gray;
 		    }
 		}
 	}
@@ -64,10 +70,10 @@ body {
 		margin-top: 20px;
 		input {
 			padding: 13px 43px 13px 22px;
-			border: 1px solid #E4E0D8;
+			border: 1px solid $border;
 			background: none;
 			border-radius: 30px;
-			color: #C6C1B0;
+			color: $dark-gray;
 			font-size: 17px;
 			font-weight: 100;
 		}
@@ -76,7 +82,7 @@ body {
 			top: 4px;
 			right: 6px;
 			padding: 10px;
-			color: #605E58;
+			color: $yellowish-gray;
 		}
 	}
 	.profile {
@@ -90,12 +96,12 @@ body {
 .wrapper {
 	width: 720px;
 	box-shadow: 0px 1px 3px 1px rgba(204,204,204,0.5);
-	background-color: #FDFAF4;
+	background-color: $light-bg;
 	&.tabs {
 		margin-bottom: 35px;
 		.tab {
 			position: relative;
-			color: #605E58;
+			color: $yellowish-gray;
 			text-decoration: none;
 			display: block;
 			padding: 23px 0;
@@ -103,7 +109,7 @@ body {
 				display: block;
 				&.headline {
 					font-weight: 100;
-					color: #C6C1B0;
+					color: $dark-gray;
 				}
 				&.number {
 					font-weight: 600;
@@ -127,7 +133,7 @@ body {
 	&.tweets {
 		.tweet {
 			padding: 30px;
-			color: #605E58;
+			color: $yellowish-gray;
 			border-bottom: 1px solid #F1EDE8;
 			.tweet-details {
 				padding-left: 20px;
@@ -142,7 +148,7 @@ body {
 				}
 				header {
 					font-size: 16px;
-					color: #C6C1B0;
+					color: $dark-gray;
 					a {
 						font-size: 17px;
 						text-decoration: none;
