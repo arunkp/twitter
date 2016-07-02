@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/basscss.min.css">
@@ -183,7 +184,26 @@
 				$(".tab").removeClass("active");
 				$(this).addClass("active")
 			})
+
+			$(window).scroll(function(){
+			  $(".img-rounded").stop().animate({"position":"fixed","top": "100px"}, "slow" );
+			});
 		});
+
+		$.fn.scrollStopped = function(callback) {
+		  var that = this, $this = $(that);
+		  $this.scroll(function(ev) {
+		    clearTimeout($this.data('scrollTimeout'));
+		    $this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+		  });
+		};
+
+		$(window).scrollStopped(function(ev){
+			console.log("hey");
+			 $(".img-rounded").stop().animate({"position":"relative","top": "0"}, "slow" );
+		  // $(".img-rounded").removeClass("scrollStarted");
+		});
+
 	</script>
 </body>
 </html>
